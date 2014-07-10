@@ -1,0 +1,9 @@
+.favButton {
+    cursor: pointer;
+    color: #ffffff;
+    text-shadow: gray 1px 1px 1px, gray 0px 1px 1px, gray 1px 0px 1px;
+    margin-left: 2px;
+}
+.favButton.favorited {
+    color: gold;
+}

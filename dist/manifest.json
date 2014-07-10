@@ -1,0 +1,30 @@
+{
+    "name": "chatwork fav",
+    "version": "0.0.1",
+    "description": "Charworkのメッセージをふぁぼれるようにします",
+    "manifest_version": 2,
+
+    "permissions": [
+        "tabs",
+        "unlimitedStorage"
+    ],
+
+    "background": {
+        "scripts": ["initialize_idb.js", "background.js"],
+        "persistent": false
+    },
+
+    "browser_action": {
+        "default_title": "",
+        "default_icon": "icon_512.png",
+        "default_popup": "popup.html"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["https://www.chatwork.com/"],
+            "css": ["cwfav.css"],
+            "js": ["cwfav.js"]
+        }
+    ]
+}
